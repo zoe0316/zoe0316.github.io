@@ -114,7 +114,7 @@
 <meta property="og:image" content="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png">
 <meta property="og:image" content="https://www.ibm.com/developerworks/cn/web/wa-introhdfs/fig1.gif">
 <meta property="og:image" content="http://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif">
-<meta property="og:updated_time" content="2018-03-07T10:29:15.630Z">
+<meta property="og:updated_time" content="2018-03-07T10:30:29.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache Hadoop 学习笔记">
 <meta name="twitter:description" content="Hadoop Distributed File System官方文档：HDFS HDFS是一个分布式文件系统，具有高容错的特点，它可以部署在“廉价”的通用硬件上，提供高吞吐率的数据访问，适合那些需要处理海量数据集的应用程序。 HDFS 集群状态预览：http://master:50070/dfshealth.html HDFS 文件系统命令：FileSystemShell 这里只展开基础的几个组件">
@@ -340,6 +340,7 @@
 <p>HDFS 集群状态预览：<a href="http://master:50070/dfshealth.html#tab-overview" target="_blank" rel="noopener">http://master:50070/dfshealth.html</a></p>
 <p>HDFS 文件系统命令：<a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/FileSystemShell.html" target="_blank" rel="noopener">FileSystemShell</a></p>
 <p>这里只展开基础的几个组件 NameNode、DataNode 和 Secondary NameNode</p>
+<a id="more"></a>
 <h4 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode"></a>NameNode</h4><p>负责构建命名空间，管理文件的元数据，存在单点故障，具体可以参见高可用解决方案：<br><a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithQJM.html" target="_blank" rel="noopener">HDFSHighAvailabilityWithQJM</a><br><a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HDFSHighAvailabilityWithNFS.html" target="_blank" rel="noopener">HDFSHighAvailabilityWithNFS</a></p>
 <h4 id="DataNode"><a href="#DataNode" class="headerlink" title="DataNode"></a>DataNode</h4><p>数据节点负责读/写 Block ，定期向 Namenode 汇报自己节点上所存储的 Block 相关信息。</p>
 <p>默认 Block 大小为 128MB，有 3 个复制集作为冗余备份，HDFS 会尽量将同一个文件的 Blocks 分散到不同的 DataNode 中，保证数据的高可用性；</p>
