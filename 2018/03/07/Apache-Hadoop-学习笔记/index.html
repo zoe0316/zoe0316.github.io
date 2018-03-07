@@ -100,26 +100,32 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop,笔记," />
 
 
-<meta name="description" content="Allen&apos;s Blog in Tech Life">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Life Is Beautiful">
-<meta property="og:url" content="http://www.allen.xin/index.html">
+<meta name="description" content="Hadoop Distributed File System官方文档：HDFS HDFS是一个分布式文件系统，具有高容错的特点，它可以部署在“廉价”的通用硬件上，提供高吞吐率的数据访问，适合那些需要处理海量数据集的应用程序。 HDFS 集群状态预览：http://master:50070/dfshealth.html HDFS 文件系统命令：FileSystemShell 这里只展开基础的几个组件">
+<meta name="keywords" content="hadoop,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apache Hadoop 学习笔记">
+<meta property="og:url" content="http://www.allen.xin/2018/03/07/Apache-Hadoop-学习笔记/index.html">
 <meta property="og:site_name" content="Life Is Beautiful">
-<meta property="og:description" content="Allen&apos;s Blog in Tech Life">
+<meta property="og:description" content="Hadoop Distributed File System官方文档：HDFS HDFS是一个分布式文件系统，具有高容错的特点，它可以部署在“廉价”的通用硬件上，提供高吞吐率的数据访问，适合那些需要处理海量数据集的应用程序。 HDFS 集群状态预览：http://master:50070/dfshealth.html HDFS 文件系统命令：FileSystemShell 这里只展开基础的几个组件">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png">
+<meta property="og:image" content="https://www.ibm.com/developerworks/cn/web/wa-introhdfs/fig1.gif">
+<meta property="og:image" content="http://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/yarn_architecture.gif">
+<meta property="og:updated_time" content="2018-03-07T10:29:15.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Life Is Beautiful">
-<meta name="twitter:description" content="Allen&apos;s Blog in Tech Life">
+<meta name="twitter:title" content="Apache Hadoop 学习笔记">
+<meta name="twitter:description" content="Hadoop Distributed File System官方文档：HDFS HDFS是一个分布式文件系统，具有高容错的特点，它可以部署在“廉价”的通用硬件上，提供高吞吐率的数据访问，适合那些需要处理海量数据集的应用程序。 HDFS 集群状态预览：http://master:50070/dfshealth.html HDFS 文件系统命令：FileSystemShell 这里只展开基础的几个组件">
+<meta name="twitter:image" content="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/images/hdfsarchitecture.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.allen.xin/"/>
+  <link rel="canonical" href="http://www.allen.xin/2018/03/07/Apache-Hadoop-学习笔记/"/>
 
 
 
@@ -128,7 +134,7 @@
     sidebar: "",
   };
 </script>
-  <title>Life Is Beautiful</title>
+  <title>Apache Hadoop 学习笔记 | Life Is Beautiful</title>
   
 
 
@@ -175,8 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -281,9 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/07/Apache-Hadoop-学习笔记/" itemprop="url">Apache Hadoop 学习笔记</a></h1>
+          <h1 class="post-title" itemprop="name headline">Apache Hadoop 学习笔记</h1>
         
 
         <div class="post-meta">
@@ -332,9 +335,7 @@
       
 
       
-        
-          
-            <h3 id="Hadoop-Distributed-File-System"><a href="#Hadoop-Distributed-File-System" class="headerlink" title="Hadoop Distributed File System"></a>Hadoop Distributed File System</h3><p>官方文档：<a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html" target="_blank" rel="noopener">HDFS</a></p>
+        <h3 id="Hadoop-Distributed-File-System"><a href="#Hadoop-Distributed-File-System" class="headerlink" title="Hadoop Distributed File System"></a>Hadoop Distributed File System</h3><p>官方文档：<a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html" target="_blank" rel="noopener">HDFS</a></p>
 <p>HDFS是一个分布式文件系统，具有高容错的特点，它可以部署在“廉价”的通用硬件上，提供高吞吐率的数据访问，适合那些需要处理海量数据集的应用程序。</p>
 <p>HDFS 集群状态预览：<a href="http://master:50070/dfshealth.html#tab-overview" target="_blank" rel="noopener">http://master:50070/dfshealth.html</a></p>
 <p>HDFS 文件系统命令：<a href="http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/FileSystemShell.html" target="_blank" rel="noopener">FileSystemShell</a></p>
@@ -384,8 +385,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># -file 提交文件让 Hadoop 分发至各节点 (推荐使用: -files)</span><br><span class="line">hadoop jar /opt/cloudera/parcels/CDH-5.14.0-1.cdh5.14.0.p0.24/lib/hadoop-mapreduce/hadoop-streaming-2.6.0-cdh5.14.0.jar -D mapreduce.job.reduces=2 -input /user/dev/test/wordcount -output /user/dev/test/wordcount-out -mapper &quot;python mapper.py&quot; -reducer &quot;python reducer.py&quot; -file mapper.py -file reducer.py</span><br><span class="line"></span><br><span class="line"># 查看输出文件</span><br><span class="line">hadoop fs -ls /user/dev/test/wordcount-out</span><br><span class="line">&gt;</span><br><span class="line">Found 3 items</span><br><span class="line">-rw-r--r--   3 dev higgs          0 2018-03-07 17:58 /user/dev/test/wordcount-out/_SUCCESS</span><br><span class="line">-rw-r--r--   3 dev higgs         19 2018-03-07 17:58 /user/dev/test/wordcount-out/part-00000</span><br><span class="line">-rw-r--r--   3 dev higgs         22 2018-03-07 17:58 /user/dev/test/wordcount-out/part-00001</span><br><span class="line"></span><br><span class="line"># 查看输出结果</span><br><span class="line">hadoop fs -cat /user/dev/test/wordcount-out/part-0000*</span><br><span class="line">&gt;</span><br><span class="line">Goodbye	1</span><br><span class="line">Hadoop	2</span><br><span class="line">Bye	1</span><br><span class="line">Hello	2</span><br><span class="line">World	2</span><br></pre></td></tr></table></figure>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://hadoop.apache.org/docs/stable/" target="_blank" rel="noopener">http://hadoop.apache.org/docs/stable/</a><br><a href="https://www.ibm.com/developerworks/cn/web/wa-introhdfs/index.html" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/web/wa-introhdfs/index.html</a><br><a href="https://www.ibm.com/developerworks/cn/data/library/bd-yarn-intro/" target="_blank" rel="noopener">https://www.ibm.com/developerworks/cn/data/library/bd-yarn-intro/</a><br><a href="https://juejin.im/entry/587c31cd128fe1006bff6d1b" target="_blank" rel="noopener">Hadoop YARN 介绍</a></p>
 
-          
-        
       
     </div>
 
@@ -403,407 +402,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.allen.xin/2018/03/05/Golang-开发入门/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Allen Tong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Life Is Beautiful">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/05/Golang-开发入门/" itemprop="url">Golang 开发入门</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-05T11:13:34+08:00">2018-03-05</time>
-            
-
-            
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
           
-            
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">brew install go</span><br><span class="line">go env</span><br><span class="line"></span><br><span class="line"># brew 切换版本</span><br><span class="line"># https://stackoverflow.com/questions/3987683/homebrew-install-specific-version-of-formula/4158763#4158763</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/05/Golang-开发入门/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/05/Golang-开发入门/" rel="next" title="Golang 开发入门">
+                <i class="fa fa-chevron-left"></i> Golang 开发入门
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.allen.xin/2018/02/28/Python-Asyncio-学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Allen Tong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Life Is Beautiful">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/28/Python-Asyncio-学习笔记/" itemprop="url">Python Asyncio 学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-28T17:14:10+08:00">2018-02-28</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <ol>
-<li><a href="#操作系统任务调度">操作系统任务调度</a></li>
-<li><a href="#进程、线程">进程、线程</a></li>
-<li><a href="#协程">协程</a></li>
-<li><a href="#Asyncio">Asyncio</a><ul>
-<li>4.1  <a href="#定义一个协程（Coroutine）">定义一个协程（Coroutine）</a></li>
-<li>4.2  <a href="#定义一个任务（Task、Future）">定义一个任务（Task、Future）</a></li>
-<li>4.3  <a href="#绑定回调获取结果">绑定回调获取结果</a></li>
-<li>4.4  <a href="#并发、并发控制">并发、并发控制</a></li>
-<li>4.5  <a href="#协程停止">协程停止</a></li>
-</ul>
-</li>
-<li><a href="#结语">结语</a></li>
-<li><a href="#参考">参考</a></li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/28/Python-Asyncio-学习笔记/#more" rel="contents">
-              Read more &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.allen.xin/2006/01/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Allen Tong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Life Is Beautiful">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2006/01/02/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2006-01-02T15:04:05+08:00">2006-01-02</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -813,14 +443,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -841,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -910,6 +554,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop-Distributed-File-System"><span class="nav-number">1.</span> <span class="nav-text">Hadoop Distributed File System</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NameNode"><span class="nav-number">1.1.</span> <span class="nav-text">NameNode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DataNode"><span class="nav-number">1.2.</span> <span class="nav-text">DataNode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Secondary-NameNode"><span class="nav-number">1.3.</span> <span class="nav-text">Secondary NameNode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#读-写流程"><span class="nav-number">1.4.</span> <span class="nav-text">读/写流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YARN"><span class="nav-number">2.</span> <span class="nav-text">YARN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Resource-Manager"><span class="nav-number">2.1.</span> <span class="nav-text">Resource Manager</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NodeManager"><span class="nav-number">2.2.</span> <span class="nav-text">NodeManager</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Application-Master"><span class="nav-number">2.3.</span> <span class="nav-text">Application Master</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce"><span class="nav-number">3.</span> <span class="nav-text">MapReduce</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#WrodCount-例子"><span class="nav-number">3.1.</span> <span class="nav-text">WrodCount 例子</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Mapper"><span class="nav-number">3.1.1.</span> <span class="nav-text">Mapper</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Reducer"><span class="nav-number">3.1.2.</span> <span class="nav-text">Reducer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行"><span class="nav-number">3.1.3.</span> <span class="nav-text">运行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1037,6 +697,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
+
+
 
   
 
